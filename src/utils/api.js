@@ -1,14 +1,21 @@
-const api = "https://jsonplaceholder.typicode.com/users"
+const api = "https://jsonplaceholder.typicode.com"
     
 export function getAll () {
   return Promise.all([
-    getAllUsers()
-  ]).then(([users]) => ({
-    users
+    getAllUsers(),
+    getAllTodos()
+  ]).then(([users, todos]) => ({
+    users,
+    todos
   }))
 }
 
 export const getAllUsers = () =>
-  fetch(`${api}`)
+  fetch(`${api}/users`)
+    .then(res => res.json())
+    .then(data => data)
+
+export const getAllTodos = () =>
+  fetch(`${api}/todos`)
     .then(res => res.json())
     .then(data => data)

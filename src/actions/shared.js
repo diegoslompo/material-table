@@ -1,11 +1,13 @@
 import { getAll } from '../utils/api'
-import {receivePosts} from '../actions/users'
+import {receiveUsers} from '../actions/users'
+import {receiveTodos} from '../actions/todos'
 
 export function handleInitialData () {
   return(dispatch) => {
     return getAll()
-      .then(({users}) => {
-        dispatch(receivePosts(users))
+      .then(({users, todos}) => {
+        dispatch(receiveUsers(users))
+        dispatch(receiveTodos(todos))
       })
   }
 }

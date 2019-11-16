@@ -5,6 +5,7 @@
  - animation
  - more infos (modal or acordion)
  - proptypes
+ - routes
 
 ## DONE
  - List
