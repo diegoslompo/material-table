@@ -4,7 +4,7 @@ Lista em React e click dinamico para lista de tarefas referente ao usuario selec
 
 Requirements:
 * &#x2705; Lista Usuarios
-* &#x2705; Material Google
+* &#x2705; Material Design Google
 
 Aditional:
 * &#x2705; Redux
